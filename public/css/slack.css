@@ -1,0 +1,126 @@
+@font-face {
+    font-family:'HelveticaNeueBold';
+    src: url('/font/HelveticaNeueBold.ttf');
+}
+
+body {
+    font-family: 'HelveticaNeueBold', sans-serif;
+    background-color: var(--color_white);
+}
+
+:root {
+    --color_white: #fff;
+    --color-black: #000;
+    --color-primary: #611F69;
+    
+    --page-width-d: 1260px;
+    --page-width-m: 1000px;
+    --page-width-small: 700px;
+
+
+    --spacing-1: 8px;
+    --spacing-2: 12px;
+    --spacing-3: 16px;
+    --spacing-4: 20px;
+    --spacing-5: 24px;
+    --spacing-6: 28px;
+    --spacing-7: 32px;
+    --spacing-8: 34px;
+
+    --size-1: 14px;
+    --size-2: 18px;
+    --size-3: 22px;
+    --size-4: 24px;
+    --size-5: 28px;
+    --size-6: 32px;
+
+}
+
+.page {
+    display: grid;
+}
+
+.page_section {
+    display: flex;
+    justify-content: center;  
+   
+}
+
+.page_content {
+    width: 100%;
+   
+    padding: var(--spacing-3);
+    
+}
+
+@media all and ( 1260px <= width){
+    .page_content {
+        max-width: var(--page-width-d);
+    } 
+}
+
+@media all and ( 1000px <= width < 1260px) {
+    .page_content {
+        max-width: var(--page-width-m);
+    } 
+}
+
+@media all and ( width < 1000px) {
+    .page_content {
+        max-width: var(--page-width-small);
+    } 
+}
+
+.hero_section {  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 35px;
+    position: relative;
+
+    height: 60vh;
+    min-width: 400px;
+}
+
+.hero {
+    display: grid;
+    gap: var(--spacing-5);
+    max-width: 425px;
+    height: 100%;
+
+    align-content: center;
+    color: var(--color-black);
+ 
+}
+
+.brands {
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly; 
+
+   row-gap: var(--spacing-4); 
+   column-gap: var(--spacing-8);
+   flex-wrap: wrap;
+}
+
+.hero_image {
+    position: absolute;
+    display: none;
+}
+
+.hero_label {
+  font-size: var(--size-1);
+
+}
+.hero_title {
+  font-size: 50px;
+}
+
+.hero_info {
+    font-size: var(--size-2);
+}
+
+.hero_buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
