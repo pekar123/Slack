@@ -1,3 +1,5 @@
+@layer component,variant;
+
 @font-face {
     font-family:'HelveticaNeueBold';
     src: url('/font/HelveticaNeueBold.ttf');
@@ -12,6 +14,7 @@ body {
     --color_white: #fff;
     --color-black: #000;
     --color-primary: #611F69;
+    --color_light: #f4ede4;
     
     --page-width-d: 1260px;
     --page-width-m: 1000px;
@@ -34,18 +37,26 @@ body {
     --size-5: 28px;
     --size-6: 32px;
 
+    --radius-1: 4px;
+
+    --opacity-1: 0.7;
+    --opacity-2: 0.3;
+
+    --transition-1: 0.7s;
+
 }
 
 .page {
     display: grid;
 }
 
-.page_section {
-    display: flex;
-    justify-content: center;  
-   
+@layer component {
+    .page_section {
+        display: flex;
+        justify-content: center;  
+    }
+    
 }
-
 .page_content {
     width: 100%;
    
@@ -75,22 +86,26 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 35px;
-    position: relative;
 
+    gap: 200px;
+    
     height: 60vh;
-    min-width: 400px;
+    min-width: 680px;
 }
 
 .hero {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.hero_content {
     display: grid;
     gap: var(--spacing-5);
     max-width: 425px;
-    height: 100%;
-
-    align-content: center;
     color: var(--color-black);
- 
+
+    position: relative;
 }
 
 .brands {
@@ -105,7 +120,8 @@ body {
 
 .hero_image {
     position: absolute;
-    display: none;
+    left: 580px;
+    
 }
 
 .hero_label {
@@ -123,4 +139,66 @@ body {
 .hero_buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-5);
+}
+
+@layer component {
+    .button {
+      text-decoration: none;
+      color: var(--color-black);
+      padding: var(--size-4);
+      border-radius: var(--radius-1);
+      text-align: center;
+      border: 1px solid transparent;
+      transition: opasity var(--transition-1);
+    }
+
+    .buttons:hover {
+        opacity: var(--opacity-1);
+        cursor: pointer;
+    }
+    .button:active {
+        opacity: var(--opacity-2);
+    }
+}
+
+@layer variant {
+    .button_primary {
+        color: var(--color_white);
+        background: var(--color-primary);
+    
+    }
+
+    .button_secondary {
+        color: var(--color-primary);
+        border-color: var(--color-primary);
+        text-align: center;
+        border-width: 2px;
+    }
+}
+
+.features_section {
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    display: grid;
+    gap: var(--spacing-5);
+}
+
+@layer variant {
+    .page_section_light {
+        background-color: var(--color_light);
+    }
+}
+
+.features_title {
+    font-size: var(--size-6);
+}
+
+.features_description {
+    font-size: var(--size-2);
+}
+
+.feat_card {
+    
 }
