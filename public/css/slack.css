@@ -48,12 +48,17 @@ body {
 
 .page {
     display: grid;
+    padding-top: 70px;
+    
+    
 }
 
 @layer component {
     .page_section {
         display: flex;
-        justify-content: center;  
+        justify-content: center; 
+        padding-top: 70px; 
+        padding-bottom: 70px;
     }
     
 }
@@ -116,6 +121,7 @@ body {
    row-gap: var(--spacing-4); 
    column-gap: var(--spacing-8);
    flex-wrap: wrap;
+   
 }
 
 .hero_image {
@@ -178,6 +184,7 @@ body {
 }
 
 .features_section {
+    
     padding-top: 150px;
     padding-bottom: 150px;
 
@@ -188,6 +195,7 @@ body {
 @layer variant {
     .page_section_light {
         background-color: var(--color_light);
+        padding-top: 60px;
     }
 }
 
@@ -200,5 +208,27 @@ body {
 }
 
 .feat_card {
+
     
+}
+
+@layer component {
+    .icon {
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+@layer variant {
+    .feat_icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .icon_arrow {
+        width: 24px;
+        height: 15px;
+        background-image: url('/svg/arrow-right.svg');
+    }
 }
