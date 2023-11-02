@@ -187,7 +187,9 @@ body {
     }
 
     .feat_content_info_1 {
+        display: grid;
         justify-self: start;
+        gap: 12px;
         
     }
     
@@ -458,7 +460,7 @@ body {
             grid-template-columns: repeat(3, 1fr);
         }
 
-        .features_section {
+        .features_section_image_1 {
             background: none;
         }
 
