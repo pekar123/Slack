@@ -120,6 +120,12 @@ body {
         border-radius: var(--radius-1);
     }
 
+    .box {
+        background-color: var(--color_white);
+        padding: var(--spacing-4);
+        border-radius: var(--radius-2);
+    }
+
     
 
     
@@ -178,27 +184,40 @@ body {
         gap: 20px;
     }
 
-    .header_active_signal {
-        width: 32px;
-        height: 32px; 
-        
+    .header--active-signal {
+        width: 24px;
+        height: 24px;    
     }
 
-    .header_active_transleter {
-        width: 32px;
-        height: 32px;
-        
+    .header--active-transleter {
+        width:24px;
+        height: 24px; 
     }
 
-    .header_active_bell {
-        width: 32px;
-        height: 32px;
-        
-        
-        
-        
+    .header--active-bell {
+        width: 24px;
+        height: 24px;   
+    }
+    
+    .field_block {
+        position: relative;
     }
 
+    .field__select {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .main_icon_analytic {
+        width: 28px;
+        height: 28px;
+        
+    }
 
 }
 
@@ -298,21 +317,27 @@ body {
 
     .icon-color-blue {
         background-color: var(--color-blue-dark);
+        width: 32px;
+        height: 32px;
+        
     }
 
     .icon-backbor-yellow {
-        background: var(--color-yellow-light);
+        background-color: var(--color-yellow-light);
+        padding: 16px;
         
         
     }
     .icon-backbor-blue {
-        background: #E1F3FC;
+        background-color: #E1F3FC;
+        padding: 16px;
         
     }
     
     .field--select {
         display: flex;
         align-items: center;
+        position: relative;
 
     }
     
