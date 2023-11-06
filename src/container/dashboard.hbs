@@ -1,10 +1,10 @@
 <body>
     <div class="page page--dashboard">
-        <aside class="page__aside aside vertical">
+        <aside class="page__aside aside vertical ">
             <div class="aside__logo text text--light">
                 Sidebar
             </div>
-            <div class="dvider"></div>
+            <div class="dvider-header"></div>
             <nav class="vartical vertical--small ">
                 <a href="#" class="nav_button nav_button__active click margin-s-bottom">
                     <span class="icon nav_button__icon" style="background-image: url('/svg/nav/home.svg');"></span>
@@ -19,19 +19,6 @@
                     <span class="text  text--light">Products</span>
                 </a>
 
-                <div class="field_block">
-                    <div class="field field--select">
-                        <span class="text text--light">Choose...</span>
-                    </div>
-                    <select class="field__select">
-                        <option value="1">111</option>
-                        <option value="2">2222</option>
-                        <option value="3">33333</option>
-                        <option value="4">44444</option>
-                        <option value="5">555555</option>
-                        <option value="6">6</option>
-                    </select>
-                </div>
             </nav>
         </aside>
 
@@ -57,14 +44,227 @@
         </header>
         <main class="main">
             <div class="layout">
-                <section class="box">
-                    <div class="analytic">
-                        <span class="icon icon-button icon-color-blue click main_icon_analytic"
-                            style="background-image: url('/svg/search/analytic.svg');"></span>
+                <section class="box analytic__block vertical">
+
+                    <div class="analytic analytic--double analytic--blue">
+
+                        <span class="icon analytic-button icon-button icon-color-blue click main_icon_analytic"
+                            style="background-image: url('/svg/analytic/order.svg');"></span>
+
+                        <div class="reletive vertical vertical--small">
+                            <div class="analytic__title text text--light">$961</div>
+                            <div class="analytic__info text text--small text-wh-gray text--light">Total Order</div>
+
+                            <span class="icon analytic__arrow"
+                                style="background-image: url('/svg/analytic/blue-arrow.svg');"></span>
+                        </div>
                     </div>
+
+                    <div class="analytic analytic--double analytic--purple">
+                        <span class="icon money-button icon-button icon--dark-purple click main_icon_analytic"
+                            style="background-image: url('/svg/analytic/money.svg');"></span>
+
+                        <div class="reletive vertical vertical--small">
+                            <div class="analytic__title text text--light">$500</div>
+                            <div class="analytic__info text text--small text-wh-gray text--light">Total Order</div>
+
+                            <span class="icon analytic__arrow"
+                                style="background-image: url('/svg/analytic/purple-arrow.svg');"></span>
+                        </div>
+                    </div>
+
+                    <div class="analytic analytic--blue-small analytic_row ">
+
+                        <span class="icon money-button icon-button icon-color-blue  click main_icon_analytic"
+                            style="background-image: url('/svg/analytic/money.svg');"></span>
+
+                        <div class=" vertical vertical--xs-small">
+                            <div class="text text--light text--big ">$203k</div>
+                            <p class="text text-small text-wh-gray">Total Income</p>
+                        </div>
+
+                    </div>
+
+                    <div class="analytic analytic_row analytic_row_border">
+
+                        <span class="icon money-button icon-button icon-backbor-yellow  click main_icon_analytic"
+                            style="background-image: url('/svg/analytic/shop.svg');"></span>
+
+                        <div class=" vertical vertical--xs-small">
+                            <div class="text  text--big text--bold">$203k</div>
+                            <p class="text text-small ">Total Income</p>
+                        </div>
+
+                    </div>
+
                 </section>
+
+                <div class="main main__double ">
+
+                    <div class="box page__purchase vertical">
+                        <h4 class="text text--heading">Purchase list</h4>
+                        <div class="dvider"></div>
+                        <div class="user text padding--s-card">
+                            <div class="id vertical vertical--small">
+                                <p>ID437661</p>
+                                <p>May 11, 2023, 14:21</p>
+                            </div>
+                            <div class="product vertical vertical--small">
+                                <p>AirOn ProCam</p>
+                                <p>7/8 USB Type-C</p>
+                            </div>
+                            <div class="money vertical vertical--small">
+                                <p>132.32 EUR</p>
+                                <p class="not-paid">Not paid</p>
+                            </div>
+                            <div class="customer vertical vertical--small">
+                                <p>Customer</p>
+                                <p>robin@com.de</p>
+                            </div>
+                        </div>
+                        <div class="dvider"></div>
+
+                        <div class="user text padding--s-card">
+                            <div class="id vertical vertical--small">
+                                <p>ID437661</p>
+                                <p>May 11, 2023, 14:21</p>
+                            </div>
+                            <div class="product vertical vertical--small">
+                                <p>AirOn ProCam</p>
+                                <p>7/8 USB Type-C</p>
+                            </div>
+                            <div class="money vertical vertical--small">
+                                <p>543 USD</p>
+                                <p class="pay-by">Pay by Stripe</p>
+                            </div>
+                            <div class="customer vertical vertical--small">
+                                <p>Customer</p>
+                                <p>robin@com.de</p>
+                            </div>
+                        </div>
+                        <div class="dvider"></div>
+
+                        <div class="user text padding--s-card">
+                            <div class="id vertical vertical--small ">
+                                <p>ID437661</p>
+                                <p>May 11, 2023, 14:21</p>
+                            </div>
+                            <div class="product vertical vertical--small">
+                                <p>AirOn ProCam</p>
+                                <p>7/8 USB Type-C</p>
+                            </div>
+                            <div class="money vertical vertical--small">
+                                <p>132.32 EUR</p>
+                                <p class="not-paid">Not paid</p>
+                            </div>
+                            <div class="customer vertical vertical--small">
+                                <p>Customer</p>
+                                <p>robin@com.de</p>
+                            </div>
+                        </div>
+                        <div class="dvider"></div>
+
+                    </div>
+
+                    <div class="box page__payment vartival">
+                        <h4 class="text text--heading">Payment</h4>
+                        <div class="dvider"></div>
+                        <div class="pay_card text ">
+                            <div class="credit_card">
+                                <input type="radio">
+                                <label for="">Credit card</label>
+                            </div>
+                            <div class="debit_card">
+                                <input type="radio">
+                                <label for="">Debit card</label>
+                            </div>
+                            <div class="paypal">
+                                <input type="radio">
+                                <label for="">PayPal</label>
+                            </div>
+                        </div>
+
+                        <div class="user_pay_info vertical text">
+                            <div class="name_card vertical vertical--xs-small">
+                                <label for="namecard">Name on card</label>
+                                <input type="text" name="namecard" class="field width--card-size">
+                            </div>
+
+                            <div class="credit_card vertical vertical--xs-small">
+                                <label for="creditcard">Credit card number</label>
+                                <input type="text" name="creditcard" class="field width--card-size">
+                            </div>
+
+                            <div class="name_card vertical vertical--xs-small">
+                                <label for="expiration">Expiration</label>
+                                <input type="text" name="expiration" class="field width--card-size">
+                            </div>
+
+                            <div class="cvv_card vertical vertical--xs-small">
+                                <label for="cvv">CVV</label>
+                                <input type="text" name="cvv" class="field width--card-size">
+                            </div>
+                        </div>
+                        <div class="dvider"></div>
+
+                        <div class="address_block text ">
+                            <div class="country vertical vertical--xs-small">
+                                <label for="">Country</label>
+                                <div class="field_block">
+                                    <div class="field field--select">
+                                        <span class="text text--light">Choose...</span>
+                                        <span class="icon main--arrow-botton"
+                                            style="background-image: url('/svg/arrow-botton-black.svg');"></span>
+                                    </div>
+                                    <select class="field__select">
+                                        <option value="1">111</option>
+                                        <option value="2">2222</option>
+                                        <option value="3">33333</option>
+                                        <option value="4">44444</option>
+                                        <option value="5">555555</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="state vertical vertical--xs-small">
+                                <label for="">State</label>
+                                <div class="field_block">
+                                    <div class="field field--select">
+                                        <span class="text text--light">Choose...</span>
+                                        <span class="icon main--arrow-botton"
+                                            style="background-image: url('/svg/arrow-botton-black.svg');"></span>
+                                    </div>
+                                    <select class="field__select">
+                                        <option value="1">111</option>
+                                        <option value="2">2222</option>
+                                        <option value="3">33333</option>
+                                        <option value="4">44444</option>
+                                        <option value="5">555555</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="dvider"></div>
+                        <div class="buttom_checkout">
+                            <a href="#"
+                                class="button_payment nav_button__active click text text--light text-cen">Continue to
+                                checkout</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-        </main>
+
+    </div>
+
+
+    </main>
+
     </div>
 </body>

@@ -111,6 +111,7 @@ body {
         width: 100%;
         max-width: 1300px;
         margin: 0 auto;
+        
     }
 
     .field {
@@ -126,10 +127,78 @@ body {
         border-radius: var(--radius-2);
     }
 
-    
+    .analytic {
+        border-radius: var(--radius-1);
+        padding: var(--spacing-5);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        
+        
+    }
 
-    
-}
+    .reletive {
+        position: relative;
+    }
+
+    .main__double {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .user {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 1fr;
+        gap: 20px;
+    }
+
+    .page__purchase {
+        max-width: 810px;
+        width: 100%;
+    }
+
+    .page__payment {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        max-width: 450px;
+        width: 100%;
+    }
+
+    .pay_card {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-2);
+    } 
+
+    .user_pay_info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        
+    }
+
+    .address_block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .button_payment {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        padding: var(--spacing-2);
+        border-radius: var(--radius-1);  
+     }
+
+
+} 
 
 @layer element {
     .page__aside {
@@ -171,8 +240,6 @@ body {
     }
 
     .icon--header-settings {
-        height: 28px;
-        width: 28px;
         position: absolute;
         top: calc(50% - (28px / 2));
         right: var(--spacing-2); 
@@ -213,11 +280,62 @@ body {
         cursor: pointer;
     }
 
+    .analytic__block {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+    }
+
+
     .main_icon_analytic {
-        width: 28px;
-        height: 28px;
+        width: 44px;
+        height: 44px;
         
     }
+
+    .analytic__title {
+        font-size: var(--size-6);
+    }
+
+    .analytic__arrow {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top:0;
+        left: calc(100% + var(--spacing-1)); 
+    }
+
+    .money-butto {
+        width: 44px;
+        height: 44px; 
+    }
+
+    .analytic_row {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: var(--spacing-2);
+    }
+
+    .analytic_row_border {
+        border: 1px solid #E0E4E8;
+        
+    }
+
+    .name_card {
+        gap: var(--spacing-1);
+        
+    }
+
+    .main--arrow-botton {
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        
+        left: calc(100% - var(--spacing-4));  
+    }
+
+    
 
 }
 
@@ -256,6 +374,10 @@ body {
         font-size: var(--size-1);
     }
 
+    .text--big {
+        font-size: var(--size-3);
+    }
+
     .text--light {
           color: var(--color_white);
     }
@@ -268,7 +390,6 @@ body {
         color: var(--color-gray-white);
     }
 
-
     .text-line {
         line-height: var(--line-height);
     }
@@ -277,9 +398,14 @@ body {
     font-weight: 500;
     }
 
+    .vertical--xs-small {
+        gap: var(--spacing-1);
+    }
+
     .vertical--small {
         gap: var(--spacing-2);
     }
+    
 
     .nav_button__active {
         background-color: var(--color-primary);
@@ -297,6 +423,10 @@ body {
     }
 
     .dvider {
+        border-bottom: 1px solid #CED4DA;
+    }
+
+    .dvider-header {
         border-bottom: 1px solid rgba(255, 255, 255, 0.25);
     }
 
@@ -317,9 +447,7 @@ body {
 
     .icon-color-blue {
         background-color: var(--color-blue-dark);
-        width: 32px;
-        height: 32px;
-        
+        padding: 16px;   
     }
 
     .icon-backbor-yellow {
@@ -340,10 +468,141 @@ body {
         position: relative;
 
     }
+
+    
+    .analytic--double {
+        grid-row: 1 / 3;
+
+    }
+
+    .analytic--blue,
+    .analytic--blue-small {
+        background-color: var(--color-blue-light);
+    }
+
+    .analytic--white {
+        border: 1px solid #E0E4E8;
+        background-color: var(--color_white);
+        
+    }
+
+    .icon--dark-purple {
+        background-color: var(--color-purple-dark);
+    }
+
+    .analytic--purple {
+        background-color: var(--color-purple-light);
+    } 
+    
+    .padding--s-card  {
+        padding: var(--spacing-2) 0;
+    }
+
+    .not-paid {
+        color: var(--color-warning);
+    }
+
+    .pay-by {
+        color: var(--color-success);
+    }
+
+    .width--card-size {
+        width: 189px;
+    }
+
     
     
 }
 
 @layer adaptive {
-   
+     @media all and (width <= 1600px) {
+        .page--dashboard {
+            grid-template-columns: 1fr;
+        }
+
+        .page__aside {
+            display: none;
+        }
+        
+        .header {
+            display: none;
+        }
+        
+     }
+
+     @media all and (width <= 1300px) {
+        .page--dashboard {
+            grid-template-columns: 1fr;
+        }
+
+        .page__aside {
+            display: none;
+        }
+
+        .header {
+            display: none;
+        }
+
+        .analytic__block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+        }
+
+        .analytic--blue, .analytic--purple {
+            height: 420px;
+            height: 100%;
+        }
+
+        .analytic {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: var(--spacing-2);
+        }
+        
+     }
+
+     @media all and (width <= 900px) {
+        .analytic__block {
+            display: flex;
+            flex-direction: column;
+            margin: 0px 20px;
+        }
+
+        .main__double {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin: 0px 20px;
+        }
+
+     }
+
+     @media all and (width <= 500px) {
+        .analytic__block {
+            margin: 0px 20px;
+        }
+
+        .main__double {
+            margin: 0px 20px;
+        }
+
+        .user {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .user_pay_info {
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        .width--card-size {
+            max-width: 410px;
+            width: 100%;
+        }
+
+     }
 }
